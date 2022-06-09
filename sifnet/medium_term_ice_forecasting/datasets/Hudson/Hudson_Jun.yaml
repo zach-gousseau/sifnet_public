@@ -1,0 +1,100 @@
+# data_path: /home/n2asadi/scratch/local_data/Hudson_Jun_InputData.npy
+data_path: datasets/Hudson_Jun_InputData.npy
+landmask_threshold: 0.6
+lat_bounds:
+- 70
+- 51
+long_bounds:
+- -65
+- -95
+name: Hudson_Freeze_v2
+raster_size:
+- 77
+- 121
+variables:
+- id: 0
+  normalize: false
+  src: era5
+  type: siconc
+- id: 1
+  mean: 117.7140163507142
+  normalize: true
+  src: era5
+  std_dev: 135.705723543558
+  type: sst
+- id: 2
+  mean: 273.55957495752017
+  normalize: true
+  src: era5
+  std_dev: 8.745085359756024
+  type: t2m
+- id: 3
+  mean: 34859.53562501449
+  normalize: true
+  src: era5
+  std_dev: 68939.53692258522
+  type: sshf
+- id: 4
+  mean: 0.567185679764646
+  normalize: true
+  src: era5
+  std_dev: 3.8113295967113805
+  type: u10
+- id: 5
+  mean: -0.4287326964901409
+  normalize: true
+  src: era5
+  std_dev: 3.8341320804543484
+  type: v10
+- id: 6
+  normalize: false
+  path: medium_term_ice_forecasting/support_files/era5-landsea-mask.nc
+  src: static
+  type: landmask
+- from: 2
+  id: 7
+  mean: 234.45500801313068
+  normalize: true
+  src: degree_days
+  std_dev: 434.8032269556371
+  type: ADD
+yearly_end:
+- 10
+- 29
+yearly_start:
+- 5
+- 1
+years:
+- 1985
+- 1986
+- 1987
+- 1988
+- 1989
+- 1990
+- 1991
+- 1992
+- 1993
+- 1994
+- 1995
+- 1996
+- 1997
+- 1998
+- 1999
+- 2000
+- 2001
+- 2002
+- 2003
+- 2004
+- 2005
+- 2006
+- 2007
+- 2008
+- 2009
+- 2010
+- 2011
+- 2012
+- 2013
+- 2014
+- 2015
+- 2016
+- 2017

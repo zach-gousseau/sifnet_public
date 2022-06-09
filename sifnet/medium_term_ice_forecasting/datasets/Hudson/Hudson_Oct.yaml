@@ -1,0 +1,99 @@
+data_path: datasets/Hudson_Oct_InputData.npy
+landmask_threshold: 0.6
+lat_bounds:
+- 70
+- 51
+long_bounds:
+- -65
+- -95
+name: Hudson_Freeze_v2
+raster_size:
+- 77
+- 121
+variables:
+- id: 0
+  normalize: false
+  src: era5
+  type: siconc
+- id: 1
+  mean: 117.28220933411941
+  normalize: true
+  src: era5
+  std_dev: 135.19964911419808
+  type: sst
+- id: 2
+  mean: 259.59961730272795
+  normalize: true
+  src: era5
+  std_dev: 13.441668939383653
+  type: t2m
+- id: 3
+  mean: -3483.959452020596
+  normalize: true
+  src: era5
+  std_dev: 127897.69046714212
+  type: sshf
+- id: 4
+  mean: 1.3419160430182284
+  normalize: true
+  src: era5
+  std_dev: 4.291284213194548
+  type: u10
+- id: 5
+  mean: -0.6431113300169864
+  normalize: true
+  src: era5
+  std_dev: 4.352239530995768
+  type: v10
+- id: 6
+  normalize: false
+  path: medium_term_ice_forecasting/support_files/era5-landsea-mask.nc
+  src: static
+  type: landmask
+- from: 2
+  id: 7
+  mean: 650.9973570729588
+  normalize: true
+  src: degree_days
+  std_dev: 928.6360105040277
+  type: ADD
+yearly_end:
+- 2
+- 28
+yearly_start:
+- 9
+- 1
+years:
+- 1985
+- 1986
+- 1987
+- 1988
+- 1989
+- 1990
+- 1991
+- 1992
+- 1993
+- 1994
+- 1995
+- 1996
+- 1997
+- 1998
+- 1999
+- 2000
+- 2001
+- 2002
+- 2003
+- 2004
+- 2005
+- 2006
+- 2007
+- 2008
+- 2009
+- 2010
+- 2011
+- 2012
+- 2013
+- 2014
+- 2015
+- 2016
+- 2017
