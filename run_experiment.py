@@ -157,7 +157,7 @@ if __name__ == "__main__":
                                      description="Run an experiment for a given month and training year")
 
     parser.add_argument('--region', metavar='region', help='domain of the forecasting model', choices=['Hudson','NWT','Arctic','PanArctic'], default='Hudson')
-    parser.add_argument('--results_dir', help='path to store results at')
+    parser.add_argument('--results_dir', help='path to store results at', default='results')
     parser.add_argument('--month', metavar='month', help='month of experiment', choices=['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'], default='Apr')
     parser.add_argument('--year', type=int, help='year to start training from', default='1980')
     parser.add_argument('--forecast_length', type=int, help='number of days in forecast', default=90)
@@ -167,8 +167,8 @@ if __name__ == "__main__":
                         '3: spatial_feature_pyramid_anomaly,'
                         '4: spatial_feature_pyramid_anomaly_fc',
                         choices=[1,2,3,4], default=1)
-    parser.add_argument('--raw_data_source', help='path to raw data source')
-    parser.add_argument('--pre_computed_vars', help='path for storing computed data variables')
+    parser.add_argument('--raw_data_source', help='path to raw data source', default='datasets/raw/')
+    parser.add_argument('--pre_computed_vars', help='path for storing computed data variables', default='datasets/pre_computed/')
 
     args = parser.parse_args()
 
