@@ -94,7 +94,7 @@ class Experiment:
         self.current_path = ""  # defined in configure_experiment()
         self.inputs = [None]    # inputs available to our model
         self.targets = [None]   # whatever our model is trying to predict
-        self.datasets_path = resource_filename("sifnet", "medium_term_ice_forecasting/datasets")
+        self.datasets_path = "datasets/yaml"
         self.dataset_name = ""
         self.available_datasets = self._get_available_datasets()
         self.dataset_manager = None  # placeholder for dataset manager objectF

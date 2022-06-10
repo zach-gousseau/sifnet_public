@@ -12,7 +12,7 @@ from datetime import date, timedelta
 
 import sifnet.medium_term_ice_forecasting.utilities.numpy_metrics as nm
 from sifnet.medium_term_ice_forecasting.utilities.visualization import calc_lat_lon_tics_labels
-from sifnet.medium_term_ice_forecasting.kfold_eval_plots.reliability_diagram_vsklearn import reliability_diagram
+from sifnet.medium_term_ice_forecasting.utilities.reliability_diagram_vsklearn import reliability_diagram
 
 
 
