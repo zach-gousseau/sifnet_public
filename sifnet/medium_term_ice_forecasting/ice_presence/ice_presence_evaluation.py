@@ -596,7 +596,6 @@ if __name__ == "__main__":
 
     # load a trained model
     model_name = 'demo_model'
-    # model = tf.keras.models.load_model('home/nazanin/workspace/local_data/results/IcePresence/NWT/NWT_Freeze_v2/H3-F30/leaky_baseline_30D_2020-01-07-20:54:07/leaky_baseline_30D_2020-01-07-20:54:07.h5')
     model = tf.keras.models.load_model('/home/nazanin/workspace/local_data/results/IcePresence/Hudson/Hudson_Freeze_v2/'
                                        'H3-F90/spatial_feature_pyramid_hidden_ND_fc_cross_val_res_2020-11-18-20:56:28/'
                                        'fold_0/spatial_feature_pyramid_hidden_ND_fc_2020-11-18-20:56:29.h5',

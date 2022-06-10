@@ -33,8 +33,8 @@ def run_experiment_month(region, base_path, mon, start_year, forecast_length, mo
     # number of gpus to use
     n_gpu = 1
 
-    #gpu.restrict_to_available_gpu(n_gpu)
-    gpu.set_gpu_options(kind="growth")
+    gpu.restrict_to_available_gpu(n_gpu)
+    # gpu.set_gpu_options(kind="growth")
 
     try:
         # choose dataset yaml based on region/month

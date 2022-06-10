@@ -1134,8 +1134,6 @@ if __name__ == '__main__':
         config = yaml.safe_load(f)
     hdf = DatasetManager(config, pre_computed_path="/home/nazanin/work/nas/SIF/vars")
     print("Unusable Data: {}".format(len(hdf.bad_dates)))
-    # hdf.add_bad_dates(dates=[date(1985, 11, 3), dates(2011, 9, 21)])  # just for demo
-    # print(len(hdf.bad_dates))
 
     hdf.config(days_of_historic_input=3, forecast_days_forward=30,
                validation_years=[1989, 2000, 2002, 2014, 2016], test_years=[1990, 2003, 2012, 2013, 2017])

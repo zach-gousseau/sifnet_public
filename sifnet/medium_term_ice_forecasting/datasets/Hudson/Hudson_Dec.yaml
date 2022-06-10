@@ -1,4 +1,4 @@
-data_path: datasets/Hudson_Dec_InputData.npy
+data_path: datasets/pre_computed/Hudson_Dec_InputData.npy
 landmask_threshold: 0.6
 lat_bounds:
 - 70
