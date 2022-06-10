@@ -11,7 +11,32 @@ We've made pre-processed Numpy arrays for the Hudson Bay available [here](https:
 The `sifnet` folder is the main module which contains the experimental set-up and training procedures. This includes various utilities which are too numerous to describe here, but the files are relatively well-documented for interested users. Of note, the `model.py` file contains the Keras models tested in this project, and the `ice_presence_experiment.py` contains the main experiment class to create and train a model. 
 
 ### Running the training pipeline 
-The full training procedure as described in the paper is written in `run_experiment.py`. This file can be invoked as a command line utility, and an example command to train a model for September can be found in `run_experiment.sh`. 
+First, set up a Python environment and install the dependencies in `requirements.txt`. Also ensure that CUDA is installed and visible to your Python environment. 
+
+The full training procedure using parameters & hyperparameters as described in the paper is written in `run_experiment.py`. This file can be invoked as a command line utility:
+
+```
+Usage: python run_experiment.py [options] 
+  options:
+    --region                Domain of the forecasting model (default: 'Hudson')
+    --results_dir           Path in which to store results (default: 'results')
+    --month                 Month of interest (default: 'Apr')
+    --year                  Year of interest (default: 1980)
+    --forecast_length       Number of days to forecast (default: 90)
+    --model_enum            Model type - see below options (default: 1) 
+    --raw_data_source       Path to the NetCDF4 files (default: './datasets/raw/')
+    --pre_computed_vars     Path to pre-processed Numpy files (default: './datasets/pre_computed/')
+
+Model types:
+    1: spatial_feature_pyramid_net_hiddenstate_ND
+    2: spatial_feature_pyramid_hidden_ND_fc
+    3: spatial_feature_pyramid_anomaly
+    4: spatial_feature_pyramid_anomaly_fc
+        --> see models.py for definitions of the different models
+```
+
+An example command to train a model for September can be found in `run_experiment.sh`. 
+
 
 ## Project Structure
 ```
