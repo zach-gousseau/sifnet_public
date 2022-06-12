@@ -3,9 +3,9 @@ This repository contains code to accompany the paper "Probabilistic Gridded Seas
 
 ## Overview
 ### Data
-Datasets are stored in the `datasets` folder. The `datasets/raw/` folder contains NetCDF4 files, e.g. as downloaded from ECMWF's CDS service. The `datasets/pre_computed/` folder contains serialized Numpy arrays created once the data pre-processing scripts have been run once (subsequent runs use these files rather than the raw data). Finally, the `datasets/yaml/` folder contains user-specified information on the spatial extent of interest, the training and test years, as well as computed aggregates on the dataset to improve efficiency. 
+Datasets should be stored in the `datasets` folder. The `datasets/raw/` folder contains NetCDF files, e.g. as downloaded from ECMWF's CDS service. The `datasets/pre_computed/` folder contains serialized Numpy arrays which are automatically created once the data pre-processing scripts have been run once (subsequent runs use these files rather than the raw NetCDF data). Finally, the `datasets/yaml/` folder contains user-specified information on the spatial extent of interest, the training and test years, as well as computed aggregates on the dataset to improve efficiency. 
 
-We've made pre-processed Numpy arrays for the Hudson Bay available [here](https://drive.google.com/drive/folders/1osYqBfz7VxNt-1aHEx_caXBKCe_5uhGa?usp=sharing) to allow users to by-pass downloading and processing ERA5 data. Download and untar the archive into `datasets/pre_computed/` to use them.
+We've made pre-processed Numpy arrays for the Hudson Bay available [here](https://drive.google.com/drive/folders/1osYqBfz7VxNt-1aHEx_caXBKCe_5uhGa?usp=sharing) to allow users to by-pass downloading and processing NetCDF files. These correspond to the YAML files in this repository. Download and untar the archive into `datasets/pre_computed/` to start training a model. 
 
 ### SIFNET module
 The `sifnet` folder is the main module which contains the experimental set-up and training procedures. This includes various utilities which are too numerous to describe here, but the files are relatively well-documented for interested users. Of note, the `model.py` file contains the Keras models tested in this project, and the `ice_presence_experiment.py` contains the main experiment class to create and train a model. 
